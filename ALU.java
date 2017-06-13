@@ -98,7 +98,7 @@ public class ALU {
 		 }
 		 else
 			 sign = "0";
-		if(number.equals("Inf")){
+		if(number.equals("+Inf")){
 			for(int i = 0;i<eLength;i++){
 				result+="1";
 			}
