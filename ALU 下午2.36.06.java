@@ -1,3 +1,4 @@
+
 package ALU;
 
 /**
@@ -108,7 +109,7 @@ public class ALU {
 			result = sign+result;
 			return result;
 		}
-		else if(number.equals("-Inf")){
+		else if(number.equals("Inf")){
 			for(int i = 0;i<eLength;i++){
 				result+="1";
 			}
@@ -1060,7 +1061,7 @@ public class ALU {
                   for(int i = 0;i<eLength+sLength;i++){
                           result+="0";
                   }
-                  result = overflow+"0"+result;
+                  result = overflow+sign+result;
                   return result;
           }
          mulDecimal = integerMultiplication(decimal1,decimal2,2*sLength+4).substring(3,3+sLength);
@@ -1106,8 +1107,13 @@ public class ALU {
 		String decimal1 = "1"+operand1.substring(eLength+1);
 		String decimal2 = "1"+operand2.substring(eLength+1);
 		String decimal = "";
+		if(sign1.equals(sign2))
+			sign = "0";
+		else
+			sign = "1";
 		if(operand1.substring(1).contains("1")==false){
-			for(int i = 0;i<eLength+sLength+2;i++){
+			result = "0"+sign;
+			for(int i = 0;i<eLength+sLength;i++){
 				result+="0";
 			}
 			return result;
