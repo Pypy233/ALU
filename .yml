@@ -1,0 +1,8 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+notifications:
+  email:
+  - 2529716798@qq.com
