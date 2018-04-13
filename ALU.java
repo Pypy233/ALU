@@ -1,5 +1,4 @@
-
-package ALU;
+package ALUTest;
 
 /**
  * 模拟ALU进行整数和浮点数的四则运算
